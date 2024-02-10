@@ -1,17 +1,16 @@
 ---
 import { Image } from 'astro:assets'
-import iconHTML from '../icons-svg/html5.svg'
-import iconReact from '../icons-svg/react.svg'
-import iconFirebase from '../icons-svg/firebase.svg'
-import iconCss from '../icons-svg/css.svg'
-import iconAstro from '../icons-svg/astro_dark.svg'
-import iconTailwind from '../icons-svg/tailwindcss.svg'
-import iconPhotoshop from '../icons-svg/photoshop.svg'
-import iconIllustrator from '../icons-svg/illustrator.svg' 
-import iconSqlite from '../icons-svg/sqlite.svg' 
-import iconJavascript from '../icons-svg/javascript.svg' 
-import iconBootstrap from '../icons-svg/bootstrap.svg' 
-import iconNodejs from '../icons-svg/nodejs.svg' 
+import iconHTML from '../icons-svg/html5.png'
+import iconReact from '../icons-svg/react.png'
+import iconFirebase from '../icons-svg/firebase.png'
+import iconCss from '../icons-svg/css.png'
+import iconAstro from '../icons-svg/astro.png'
+import iconTailwind from '../icons-svg/tailwind.png'
+import iconPhotoshop from '../icons-svg/photoshop.png'
+import iconIllustrator from '../icons-svg/illustrator.png' 
+import iconSqlite from '../icons-svg/sqlite.png' 
+import iconJavascript from '../icons-svg/javascript.png' 
+import iconNodejs from '../icons-svg/nodejs.png' 
 
 
 const skills = [ 
@@ -24,15 +23,11 @@ const skills = [
         icon: iconCss
     },
     {
-        name: "Bootstrap",
-        icon: iconBootstrap
-    },
-    {
         name: "JavaScript",
         icon: iconJavascript
     },
     {
-        name: "ReactJs",
+        name: "React",
         icon: iconReact
     },
     {
@@ -44,29 +39,29 @@ const skills = [
         icon: iconFirebase
     },
     {
-        name: "Astro",
+        name: "Astro Build",
         icon: iconAstro
     },
     {
-        name: "Tailwind",
+        name: "Tailwind Css",
         icon: iconTailwind
     },
     {
-        name: "SqLite",
+        name: "SqLite DB",
         icon: iconSqlite
     },
     {
-        name: "Photosohp",
+        name: "Adobe Photosohp",
         icon: iconPhotoshop
     },
     {
-        name: "Illustrator",
+        name: "Adobe Illustrator",
         icon: iconIllustrator
     },
 ]
 
 ---
-<nav class="inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] w-[260px] mx-[calc((100%-250px)/2)] md:w-[650px] md:mx-[calc((100%-750px)/2)]">   
+<div class="inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] w-[260px] mx-[calc((100%-250px)/2)] md:w-[650px] md:mx-[calc((100%-750px)/2)]">   
     <ul class="flex items-center justify-center md:justify-start">
         {skills.map(({name, icon}) =>  (
             <li class="mx-2 xl:mx-4"><Image src={icon} alt={name} class="size-12 max-w-none"/></li>
@@ -77,7 +72,7 @@ const skills = [
             <li class="mx-2 xl:mx-4"><Image src={icon} alt={name} class="size-12 max-w-none"/></li>
         ))}
     </ul>
-</nav>
+</div>
 
 <style>
     ul {
