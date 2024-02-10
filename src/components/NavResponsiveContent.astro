@@ -1,0 +1,27 @@
+ <!-- menu responsive -->
+     <div id="navbarToggleExternalContent" class="hidden w-[300px] flex fixed right-2 top-24 bg-purple-950 bg-opacity-45 px-8 py-4 border border-purple-700 rounded font-semibold">
+        <nav class="flex flex-col gap-y-4 text-sm">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.getElementById("responsive");
+        const navbarContent = document.getElementById("navbarToggleExternalContent");
+        if (navbar && navbarContent) {
+            navbar.addEventListener('click', () => {
+                if(navbarContent.classList.contains("hidden")) {
+                    navbarContent.classList.remove("hidden");
+                } else {
+                    navbarContent.classList.add("hidden");
+                }
+            });
+        }
+      
+    });
+ </script>

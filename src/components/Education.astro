@@ -1,0 +1,28 @@
+---
+import EducationItem from "./EducationItem.astro"
+
+const education = [
+    {  
+        date: "2022 - 2023",
+        title: "Coderhouse - Full Stack Developer",
+        description: "Course of full stack developer, learned languages: HTML, CSS, JavaScript, ReactJs, Bootstrap, NodeJs."
+    },
+    {
+        date: "2023",
+        title: "ENADE - Bodybuilding Instructor",
+        description: "Personal trainer course trained to plan training routines and mesocycle monitoring, strength and hypertrophy concepts, and exercise management."
+    },
+    {
+        date: "2017-2021",
+        title: "ICS - Secondary",
+        description: "Bachelor of visual arts."
+    }
+]
+--- 
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {education.map((education) => (
+        <li class="mb-10 ms-4">
+            <EducationItem {...education} />
+        </li>
+    ))}
+</ol>

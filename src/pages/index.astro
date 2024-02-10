@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro'
+import imgCv from '../imgs/foto-portfolio2.png'
+import GitHub from '../icons/GitHub.astro'
+import Behance from '../icons/Behance.astro'
+import Linkedin from '../icons/Linkedin.astro'
+import Gmail from '../icons/Gmail.astro'
+import Case from '../icons/Case.astro'
+import Code from '../icons/Code.astro'
+import EducationIcon from '../icons/EducationIcon.astro'
+import Person from '../icons/Person.astro'
+import { Image } from 'astro:assets';
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Projects from '../components/Projects.astro'
+import Education from '../components/Education.astro'
+import About from '../components/About.astro'
+import Contact from '../components/Contact.astro'
+import Skills from '../components/Skills.astro'
+---
+
+<Layout title="Portfolio Marcos Dionel Iannibelli - Full Stack Developer"
+description='Hire mdiannibelli for the development and design of web pages,'>
+	<main class="px-4">
+		<!-- Heroe -->
+		<SectionContainer class='pt-40 pb-24 mt-20'>
+			<div class="flex justify-center mb-6">
+				<Image src={imgCv} alt="imgCv" class="drop-shadow-xl size-14 flex sm:hidden"/>
+			</div>
+			<h1 class="text-white text-3xl md:text-4xl sm:text-5xl font-bold flex flex-row -mb-2 gap-x-4">Hello world! I'm</h1>
+			<span class="name text-5xl sm:text-6xl text-gradient font-extrabold">Marcos Iannibelli</span>
+			<h2 class="flex justify-between font-bold text-white text-3xl sm:text-4xl h-20 max-w-[724px]">
+                <span>Web Developer & Designer</span>
+                <Image src={imgCv} alt="imgCv" class="drop-shadow-xl relative size-48 bottom-32 hidden sm:flex"/>
+            </h2>
+			<nav class="flex flex-wrap gap-2 mb-3 mt-4 sm:mt-0">
+				<a class="rounded-full border border-white/20 flex items-center text-xs sm:text-base gap-x-2 px-2 py-1 sm:px-3 sm:py-2 hover:bg-[#6e5494] hover:bg-opacity-25 hover:border-[#6e5494] duration-300 ease" target="_blank" href="https://github.com/mdiannibelli"><GitHub/>Github</a>
+				<a class="rounded-full border border-white/20 flex items-center text-xs sm:text gap-x-2 px-2 py-1 sm:px-3 sm:py-2 hover:bg-blue-500 hover:bg-opacity-25 hover:border-blue-500 duration-300 ease" target="_blank" href="https://www.behance.net/mdiannibelli"><Behance/>Behance</a>
+				<a class="rounded-full border border-white/20 flex items-center text-xs sm:text gap-x-2 px-2 py-1 sm:px-3 sm:py-2 hover:bg-[#f2c01b] hover:bg-opacity-25 hover:border-[#f2c01b] duration-300 ease" target="_blank"  href="https://www.linkedin.com/in/marcos-iannibelli-1b3827254/"><Linkedin/>Linkedin</a>
+				<a class="rounded-full border border-white/20 flex items-center text-xs sm:text gap-x-2 px-2 py-1 sm:px-3 sm:py-2 hover:bg-[#c71610] hover:bg-opacity-25 hover:border-[#c71610] duration-300 ease" target="_blank" href="mailto:mdiannibelli@gmail.com"><Gmail/>mdiannibelli@gmail.com</a>
+			</nav>
+
+			<!-- Skills -->
+			<SectionContainer class='mb-20 mt-4'>
+				<Skills/>
+			</SectionContainer>
+
+		</SectionContainer>
+
+
+		<!-- Experiencie -->
+		<SectionContainer id="experience" class='mb-20'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Case class="size-8"/>Work Experience</h2>
+			<Experience/>
+		</SectionContainer>
+
+		<!-- Projects -->
+		<SectionContainer id="projects" class='mb-20'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Code class="size-8"/>Projects</h2>
+			<Projects/>
+		</SectionContainer>
+		
+		<!-- Education -->
+		<SectionContainer class='mb-20'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><EducationIcon class="size-8"/>Education</h2>
+			<Education/>
+		</SectionContainer>
+
+		<SectionContainer id="about" class='mb-20'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Person class="size-8"/>About</h2>
+			<About/>
+		</SectionContainer>
+
+		<SectionContainer id="contact" class='mb-20'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Gmail class="size-8"/>Contact</h2>
+			<Contact/>
+		</SectionContainer>
+	</main>
+</Layout>
+
+<style>
+	/* text-gradient */
+	.bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+    }   
+    
+    :root {
+        --accent: 61,29,146;
+        --accent-light: 113,71,255;
+        --accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			#8b68fd 90%
+		);
+    }
+
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		background-clip: text;
+        color: #fff;
+		background-size: 120%;
+	} 
+
+	.name {
+		color: transparent;
+	}
+	
+</style>

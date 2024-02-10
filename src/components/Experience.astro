@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const Experiencie = [
+    {
+        date: '2022 - Present',
+        title: 'Freelance Web Developer',
+        description: `Creation of personalized web pages according to the user's objective.`,
+        link: 'https://github.com/mdiannibelli'
+    },
+    {
+        date: '2024 - Present',
+        title: 'Ironwrap',
+        description: 'Own business of sports equipment, logo creation and design, covers and social networks, content and advertising creation, supplier management and customer service.',
+        link: 'https://ironwrap.empretienda.com.ar'
+    },
+    {
+        date: '2023 - Present',
+        title: 'Bodybuilding Instructor',
+        description: 'In-person and virtual bodybuilding instructor, completely personalized strength and hypertrophy training advice divided by mesocycles.',
+        link: 'https://www.instagram.com/mdiannibelli/'
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">    
+    {Experiencie.map((experiencie) => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experiencie}/>    
+        </li>
+    ))}              
+</ol>
+
