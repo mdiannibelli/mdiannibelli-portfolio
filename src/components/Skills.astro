@@ -5,8 +5,6 @@ import iconReact from '../icons-svg/react.svg'
 import iconCss from '../icons-svg/css.svg'
 import iconAstro from '../icons-svg/astro_dark.svg'
 import iconTailwind from '../icons-svg/tailwindcss.svg'
-/* import iconPhotoshop from '../icons-svg/photoshop.png'
-import iconIllustrator from '../icons-svg/illustrator.png'  */
 import iconSqlite from '../icons-svg/sqlite.svg' 
 import iconJavascript from '../icons-svg/javascript.svg' 
 import iconNodejs from '../icons-svg/nodejs.svg' 
@@ -49,33 +47,21 @@ const skills = [
 
 ---
 <div class="inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] w-[260px] mx-[calc((100%-250px)/2)] md:w-[650px] md:mx-[calc((100%-750px)/2)]">   
-    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 xl:[&_li]:mx-8 [&_img]:max-w-none">
-        
-            <li><Image src={iconHTML} alt={""} class="size-12"/></li>
-            <li><Image src={iconCss} alt={""} class="size-12"/></li>
-            <li><Image src={iconJavascript} alt={""} class="size-12"/></li>
-            <li><Image src={iconReact} alt={""} class="size-12"/></li>
-            <li><Image src={iconNodejs} alt={""} class="size-12"/></li>
-            <li><Image src={iconAstro} alt={""} class="size-12"/></li>
-            <li><Image src={iconTailwind} alt={""} class="size-12"/></li>
-            <li><Image src={iconSqlite} alt={""} class="size-12"/></li>
-       
+    <ul class="flex items-center justify-center md:justify-start [&_li]:mx-3 xl:[&_li]:mx-8 [&_img]:max-w-none">
+        {skills.map(({icon}) => (
+            <li><Image src={icon} alt="" class="size-16 sm:size-12" /></li>
+        ))}
     </ul>
     <ul class="flex items-center justify-center md:justify-start [&_li]:mx-2 xl:[&_li]:mx-8 [&_img]:max-w-none">
-        <li><Image src={iconHTML} alt={""} class="size-12"/></li>
-        <li><Image src={iconCss} alt={""} class="size-12"/></li>
-        <li><Image src={iconJavascript} alt={""} class="size-12"/></li>
-        <li><Image src={iconReact} alt={""} class="size-12"/></li>
-        <li><Image src={iconNodejs} alt={""} class="size-12"/></li>
-        <li><Image src={iconAstro} alt={""} class="size-12"/></li>
-        <li><Image src={iconTailwind} alt={""} class="size-12"/></li>
-        <li><Image src={iconSqlite} alt={""} class="size-12"/></li>
+        {skills.map(({icon}) => (
+            <li><Image src={icon} alt="" class="size-16 sm:size-12" /></li>
+        ))}
     </ul>
 </div>
 
 <style>
     ul {
-        animation: scrollInfinite 25s linear infinite; 
+        animation: scrollInfinite 20s linear infinite; 
     }
     @keyframes scrollInfinite {
         0% {
