@@ -6,7 +6,14 @@ import iconCss from '../icons/Css.astro'
 import iconAstro from '../icons/AstroIcon.astro'
 import iconTailwind from '../icons/Tailwind.astro'
 import iconPhotoshop from '../icons/Photoshop.astro'
-import iconIllustrator from '../icons/Illustrator.astro' 
+import iconIllustrator from '../icons/Illustrator.astro'
+import project1 from '../imgs/project1.png' 
+import project2 from '../imgs/project2.png' 
+import project3 from '../imgs/project3.png' 
+import project4 from '../imgs/project4.png' 
+import project5 from '../imgs/project5.png' 
+import project6 from '../imgs/project6.png' 
+import { Image } from 'astro:assets'
     const tagsIcon = {
         HTML: {
             name: "HTML",
@@ -55,7 +62,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2023',
             type: 'Web',
             title: 'The Trainig Wiki',
-            img: '../src/imgs/project1.png',
+            img: project1,
             link: 'https://thetrainingwiki.netlify.app',
             tags: [tagsIcon.REACTJS]
         },
@@ -63,7 +70,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2022',
             type: 'Web',
             title: 'Dionel Shop',
-            img: '../src/imgs/project3.png',
+            img: project2,
             link: 'https://dionel-shop.netlify.app',
             tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
         },
@@ -71,7 +78,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2022',
             type: 'Web',
             title: 'Moon Guitars',
-            img: '../src/imgs/project2.png',
+            img: project3,
             link: 'https://moonguitars.netlify.app',
             tags: [tagsIcon.HTML , tagsIcon.CSS]
         },
@@ -79,7 +86,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2024',
             type: 'Web',
             title: 'Make you CV',
-            img: '../src/imgs/project4.png',
+            img: project4,
             link: 'https://make-you-cv.netlify.app',
             tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
         },
@@ -87,7 +94,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2024',
             type: 'Speed Art',
             title: 'World War 2',
-            img: '../src/imgs/project5.png',
+            img: project5,
             link: 'https://www.behance.net/gallery/188824105/World-War-2-Speed-Art',
             tags: [tagsIcon.PHOTOSHOP]
         },
@@ -95,7 +102,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
             date: '2024',
             type: 'Graphic Design',
             title: 'Ironwrap',
-            img: '../src/imgs/project6.png',
+            img: project6,
             link: 'https://www.behance.net/gallery/189840909/Iron-Wrap-Empretienda-Design',
             tags: [tagsIcon.ILLUSTRATOR, tagsIcon.PHOTOSHOP]
         }
@@ -107,7 +114,7 @@ import iconIllustrator from '../icons/Illustrator.astro'
     {Proyects.map(({img, link, date, title, type, tags}) => (
             <main class="flex">
         <a href={link} class="link flex flex-col justify-center" target="_blank">   
-        <img src={img} class="absolute w:[140px] h:[120px] sm:w-[224px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
+        <Image src={img} alt={""} class="absolute w:[140px] h:[120px] sm:w-[224px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
             <div class="sm:p-4 ml-2 sm:ml-0 relative">
                 <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
                 <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] sm:text-1xl">{title}</h3>
