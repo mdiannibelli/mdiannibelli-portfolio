@@ -118,7 +118,7 @@ import { Image } from 'astro:assets'
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-6">
     {Proyects.map(({img, link, date, title, type, tags, code}) => (
             <main class="flex flex-col">
-        <a href={link} class="link flex flex-col w-[288px] h-[200px] -mb-2" target="_blank">   
+        <a href={link} class="link flex flex-col w-full h-[200px] -mb-2" target="_blank">   
         <Image src={img} alt={""} class="absolute w:[140px] h:[120px] sm:w-[214px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
             <div class="sm:p-4 ml-2 mt-4 sm:mt-0 sm:ml-0 relative">
                 <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
