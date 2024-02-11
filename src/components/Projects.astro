@@ -64,38 +64,43 @@ import { Image } from 'astro:assets'
             title: 'The Trainig Wiki',
             img: project1,
             link: 'https://thetrainingwiki.netlify.app',
+            code: 'https://github.com/mdiannibelli/The-Training-Wiki',
             tags: [tagsIcon.REACTJS]
         },
         {
             date: '2022',
             type: 'Web',
-            title: 'Dionel Shop',
-            img: project2,
-            link: 'https://dionel-shop.netlify.app',
-            tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
-        },
-        {
-            date: '2022',
-            type: 'Web',
             title: 'Moon Guitars',
-            img: project3,
+            img: project2,
             link: 'https://moonguitars.netlify.app',
+            code: 'https://github.com/mdiannibelli/moonguitars',
             tags: [tagsIcon.HTML , tagsIcon.CSS]
         },
+       /*  {
+            date: '2022',
+            type: 'Web',
+            title: 'Dionel Shop',
+            img: project3,
+            link: 'https://dionel-shop.netlify.app',
+            code: '',
+            tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
+        }, */
         {
             date: '2024',
             type: 'Web',
             title: 'Make you CV',
             img: project4,
             link: 'https://make-you-cv.netlify.app',
+            code: 'https://github.com/mdiannibelli/make-you-cv',
             tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
-        },
-        {
+        }
+       /*  {
             date: '2024',
             type: 'Speed Art',
             title: 'World War 2',
             img: project5,
             link: 'https://www.behance.net/gallery/188824105/World-War-2-Speed-Art',
+            code: '',
             tags: [tagsIcon.PHOTOSHOP]
         },
         {
@@ -104,36 +109,43 @@ import { Image } from 'astro:assets'
             title: 'Ironwrap',
             img: project6,
             link: 'https://www.behance.net/gallery/189840909/Iron-Wrap-Empretienda-Design',
+            code: '',
             tags: [tagsIcon.ILLUSTRATOR, tagsIcon.PHOTOSHOP]
-        }
+        } */
 ]
 
 ---
 
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-6">
-    {Proyects.map(({img, link, date, title, type, tags}) => (
-            <main class="flex">
-        <a href={link} class="link flex flex-col justify-center" target="_blank">   
-        <Image src={img} alt={""} class="absolute w:[140px] h:[120px] sm:w-[224px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
-            <div class="sm:p-4 ml-2 sm:ml-0 relative">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-6">
+    {Proyects.map(({img, link, date, title, type, tags, code}) => (
+            <main class="flex flex-col">
+        <a href={link} class="link flex flex-col w-[288px] h-[200px] -mb-2" target="_blank">   
+        <Image src={img} alt={""} class="absolute w:[140px] h:[120px] sm:w-[214px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
+            <div class="sm:p-4 ml-2 mt-4 sm:mt-0 sm:ml-0 relative">
                 <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
                 <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] sm:text-1xl">{title}</h3>
                 <p class="text-white font-regular leading-3 text-[10px] sm:text-sm text-pretty">{type}</p>
+                </div>
+                </a>
                 
-                <ul class="flex relative justify-center items-center mt-2 sm:mt-20">
+                <ul class="flex relative justify-center items-center mt-4 sm:mt-0">
                     {tags.map(tag => (
-                        <li class="text-[7px] sm:text-xs text-pretty ">   
-                            <span class="flex sm:gap-x-2 items-center px-2">
-                                <tag.icon class={`size-2 sm:size-3 ${tag.class}`}></tag.icon>
+                        <li class="text-[7px] sm:text-xs text-pretty ml-1 mr-1">   
+                            <span class="flex gap-x-1 sm:text-[8px] text-[10px] items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
+                                <tag.icon class={`size-3 sm:size-2 ${tag.class}`}></tag.icon>
                                 {tag.name}
                                 </span>
                                 </li>
                                 ))}
                                 </ul>
-            </div>
-                
-        </a>
+                <div class="flex justify-center mt-2">
+                    <div class="flex justify-center bg-gray-700 border rounded border-slate-500 w-[65px]">   
+                         <a class="text-[8px]" href={code} target="_blank"><button>View code</button></a>
+                    </div>
+                </div>
+                                
         </main>
+        
         ))}
 </div>
 <div class="grid justify-center mt-10">
@@ -146,13 +158,13 @@ import { Image } from 'astro:assets'
         color: rgba(113,71,255);
     
     }
-    button {
+    .all-projects button {
         background-color: rgba(113,71,255);
         transition-timing-function: cubic-bezier(.4,0,1,1);
         transition-duration: .15s;
     }
     
-    button:hover {
+    .all-projects button:hover {
         background-color: rgba(61,29,146);
         transition-timing-function: cubic-bezier(.4,0,1,1);
         transition-duration: .15s;
@@ -162,8 +174,6 @@ import { Image } from 'astro:assets'
         position: relative;
         overflow: hidden;
         transition: width 0.3s, opacity 0.3s, transform 0.3s;
-        width: 224px;
-        height: 180px;
         opacity: 0.6;
     }
 
