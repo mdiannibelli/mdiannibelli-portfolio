@@ -7,8 +7,9 @@ import iconAstro from '../icons/AstroIcon.astro'
 import iconTailwind from '../icons/Tailwind.astro'
 import iconPhotoshop from '../icons/Photoshop.astro'
 import iconIllustrator from '../icons/Illustrator.astro'
-import project1 from '../imgs/project1.jpg' 
-import project8 from '../imgs/project8.jpg' 
+import iconNextJs from '../icons/NextJs.astro'
+import projectEcommerce from '../imgs/project-ecommerce.jpg' 
+import project9 from '../imgs/project9.jpg' 
 
 import project4 from '../imgs/project4.jpg' 
  
@@ -53,15 +54,29 @@ import { Image } from 'astro:assets'
             name: "Illustrator",
             icon: (iconIllustrator),
             class: ""
+        },
+        NEXTJS: {
+            name: "NextJs",
+            icon: (iconNextJs),
+            class: ""
         }
     }
     /* Projects */
     const Proyects = [
+    {
+            date: '2024',
+            type: 'Web',
+            title: 'Marcos Dionel Asesorias',
+            img: project9,
+            link: 'https://mdiannibelliasesorias.vercel.app',
+            code: 'https://github.com/mdiannibelli/mdiannibelliasesorias/tree/main',
+            tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND]
+        },
         {
             date: '2024',
             type: 'E-commerce website',
             title: 'Shop E-commerce',
-            img: project8,
+            img: projectEcommerce,
             link: 'https://shop-ecommerce-chi.vercel.app',
             code: 'https://github.com/mdiannibelli/shop-ecommerce',
             tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
@@ -93,7 +108,7 @@ import { Image } from 'astro:assets'
             code: 'https://github.com/mdiannibelli/make-you-cv',
             tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
         },
-        {
+        /* {
             date: '2023',
             type: 'Web',
             title: 'The Trainig Wiki',
@@ -101,7 +116,7 @@ import { Image } from 'astro:assets'
             link: 'https://thetrainingwiki.netlify.app',
             code: 'https://github.com/mdiannibelli/The-Training-Wiki/tree/master',
             tags: [tagsIcon.REACTJS]
-        },
+        }, */
        /*  {
             date: '2024',
             type: 'Speed Art',
