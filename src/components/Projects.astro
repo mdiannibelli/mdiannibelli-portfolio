@@ -109,7 +109,7 @@ import { Image } from 'astro:assets'
 
 <div class="flex flex-col gap-12">
     {Proyects.map(({img, link, date, title, type, tags, code}, id) => (
-        <div class={`flex md:gap-8 ${id % 2 === 0 ? 'reverse-class' : ''} flex-col md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}>
+        <div class={`flex md:gap-8 ${id % 2 === 0 ? 'reverse-class' : ''} flex-col flex-wrap md:flex-nowrap md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}>
             <div class="flex">
                 <a href={link} class="link" target="_blank">   
                 <Image src={img} alt={title} class="sm:w-[460px] sm:h-full lg:object-cover  rounded-md brightness-75 saturate-100 contrast-75"/>
@@ -173,5 +173,9 @@ import { Image } from 'astro:assets'
 
     .reverse-class {
         flex-direction: row-reverse;
+    }
+
+    .normal-class {
+        flex-direction: row;
     }
 </style>
