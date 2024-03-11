@@ -61,7 +61,7 @@ import { Image } from 'astro:assets'
             class: ""
         }
     }
-    /* Projects */
+
     const Proyects = [
     {
             id: 1,
@@ -108,8 +108,8 @@ import { Image } from 'astro:assets'
 ---
 
 <div class="flex flex-col gap-12">
-    {Proyects.map(({img, link, date, title, type, tags, code}) => (
-        <div class='flex md:gap-8  flex-col md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl'>
+    {Proyects.map(({img, link, date, title, type, tags, code}, id) => (
+        <div class={`flex md:gap-8 ${id % 2 === 0 ? 'reverse-class' : ''} flex-col md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}>
             <div class="flex">
                 <a href={link} class="link" target="_blank">   
                 <Image src={img} alt={title} class="sm:w-[460px] sm:h-full lg:object-cover  rounded-md brightness-75 saturate-100 contrast-75"/>
@@ -142,7 +142,6 @@ import { Image } from 'astro:assets'
 </div>
 
 <style>
-
     .all-projects:hover {
         color: rgba(113,71,255);
     
@@ -172,4 +171,7 @@ import { Image } from 'astro:assets'
         text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
     }
 
+    .reverse-class {
+        flex-direction: row-reverse;
+    }
 </style>
