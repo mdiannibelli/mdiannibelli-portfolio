@@ -8,9 +8,10 @@ import iconTailwind from '../icons/Tailwind.astro'
 import iconPhotoshop from '../icons/Photoshop.astro'
 import iconIllustrator from '../icons/Illustrator.astro'
 import iconNextJs from '../icons/NextJs.astro'
-import projectEcommerce from '../imgs/project-ecommerce.jpg' 
-import project9 from '../imgs/project9.jpg' 
-import project10 from '../imgs/project-10.webp' 
+import shopecommerce from '../imgs/shopecommerce.webp' 
+import mdiannibelliasesorias from '../imgs/mdiannibelliasesorias.webp' 
+import limitesur from '../imgs/limitesur.webp' 
+import trainingwiki from '../imgs/trainingwiki.webp'
 
 import project4 from '../imgs/project4.jpg' 
  
@@ -65,119 +66,76 @@ import { Image } from 'astro:assets'
     /* Projects */
     const Proyects = [
     {
+            id: 1,
             date: '2024',
-            type: 'Real site web',
-            title: 'Limite Sur - Alquiler cabañas',
-            img: project10,
+            type: 'Limite sur was a project that arose from a need for a client who had a cabin rental in Patagonia, Argentina. The website contains four sections, it has been developed in one of the most recent framework which is known as Astro that allows creating landing pages with a unique performance, and also implement other dependencies that in my case have been ReactJs used mainly in the section from Gallery.',
+            title: 'Limite Sur Cabañas',
+            img: limitesur,
             link: 'https://limite-sur.vercel.app',
             code: 'https://github.com/mdiannibelli/limite-sur',
             tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
     },
     {
+            id: 2,  
             date: '2024',
-            type: 'Web',
-            title: 'Marcos Dionel Asesorias',
-            img: project9,
+            type: 'Bodybuilding consulting website, this project was done for myself because I needed to show my physical transformation to attract new clients, also to offer various forms of contact and what my training plans include.',
+            title: 'Marcos Dionel',
+            img: mdiannibelliasesorias,
             link: 'https://mdiannibelliasesorias.vercel.app',
             code: 'https://github.com/mdiannibelli/mdiannibelliasesorias/tree/main',
             tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND]
         },
         {
+            id: 3,
             date: '2024',
-            type: 'E-commerce website',
+            type: 'This project was a store of fictitious products that has 5 sections, functions such as adding products to the shopping cart, checkout, login with firebase authentication, filtering products by category and by search engine and much more.',
             title: 'Shop E-commerce',
-            img: projectEcommerce,
+            img: shopecommerce,
             link: 'https://shop-ecommerce-chi.vercel.app',
             code: 'https://github.com/mdiannibelli/shop-ecommerce',
             tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
         },
-       /*  {
-            date: '2022',
-            type: 'Web',
-            title: 'Moon Guitars',
-            img: project2,
-            link: 'https://moonguitars.netlify.app',
-            code: 'https://github.com/mdiannibelli/moonguitars',
-            tags: [tagsIcon.HTML , tagsIcon.CSS]
-        }, */
-       /*  {
-            date: '2022',
-            type: 'Web',
-            title: 'Dionel Shop',
-            img: project3,
-            link: 'https://dionel-shop.netlify.app',
-            code: '',
-            tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
-        }, */
-        /* {
-            date: '2024',
-            type: 'Web',
-            title: 'Make you CV',
-            img: project4,
-            link: 'https://make-you-cv.netlify.app',
-            code: 'https://github.com/mdiannibelli/make-you-cv',
-            tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
-        }, */
-        /* {
+         {
+            id: 4,
             date: '2023',
-            type: 'Web',
+            type: 'Website that presents itself as the "wikipedia of fitness." Our platform offers comprehensive information on a wide variety of topics related to training and physical activity.',
             title: 'The Trainig Wiki',
-            img: project1,
+            img: trainingwiki,
             link: 'https://thetrainingwiki.netlify.app',
             code: 'https://github.com/mdiannibelli/The-Training-Wiki/tree/master',
-            tags: [tagsIcon.REACTJS]
-        }, */
-       /*  {
-            date: '2024',
-            type: 'Speed Art',
-            title: 'World War 2',
-            img: project5,
-            link: 'https://www.behance.net/gallery/188824105/World-War-2-Speed-Art',
-            code: '',
-            tags: [tagsIcon.PHOTOSHOP]
-        },
-        {
-            date: '2024',
-            type: 'Graphic Design',
-            title: 'Ironwrap',
-            img: project6,
-            link: 'https://www.behance.net/gallery/189840909/Iron-Wrap-Empretienda-Design',
-            code: '',
-            tags: [tagsIcon.ILLUSTRATOR, tagsIcon.PHOTOSHOP]
-        } */
+            tags: [tagsIcon.REACTJS, tagsIcon.CSS]
+        }, 
 ]
 
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-6">
-    {Proyects.map(({img, link, date, title, type, tags, code}) => (
-            <main class="flex flex-col">
-        <a href={link} class="link flex flex-col w-full h-[200px] -mb-2" target="_blank">   
-        <Image src={img} alt={""} class="absolute w:[140px] h:[120px] sm:w-[214px] sm:h-[180px] bg-cover bg-center rounded-md brightness-75 saturate-100 contrast-75"/>
-            <div class="sm:p-4 ml-2 mt-4 sm:mt-0 sm:ml-0 relative">
-                <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
-                <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] sm:text-1xl">{title}</h3>
-                <p class="text-white font-regular leading-3 text-[10px] sm:text-sm text-pretty">{type}</p>
+<div class="flex flex-col gap-12">
+    {Proyects.map(({img, link, date, title, type, tags, code, id}) => (
+        <div class={`flex md:gap-8 ${id % 2 === 0 ? 'flex-row-reverse' : ''} flex-col md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}>
+            <div class="flex">
+                <a href={link} class="link" target="_blank">   
+                <Image src={img} alt={""} class="sm:w-[460px] sm:h-full lg:object-cover  rounded-md brightness-75 saturate-100 contrast-75"/>
+                        </a>
                 </div>
-                </a>
-                
-                <ul class="flex relative justify-center items-center mt-4 sm:mt-0">
-                    {tags.map(tag => (
-                        <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">   
-                            <span class="flex gap-x-1 sm:text-[8px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
-                                <tag.icon class={`size-3 sm:size-2 ${tag.class}`}></tag.icon>
-                                {tag.name}
-                                </span>
-                                </li>
-                                ))}
-                                </ul>
-                <div class="flex justify-center mt-2">
-                    <div class="flex justify-center bg-gray-700 border rounded border-slate-500 w-[65px]">   
-                         <a class="text-[8px]" href={code} target="_blank"><button>View code</button></a>
+                <div class="flex flex-col justify-center mx-auto p-6">
+                    <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
+                    <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] md:text-2xl lg:text-4xl text-pretty">{title}</h3>
+                    <p class="text-white font-regular leading-3 text-[8px] md:text-xs lg:text-md text-pretty mb-4 mt-2 max-w-md">{type}</p>
+                    <ul class="flex justify-center items-center md:mt-4 ">
+                        {tags.map(tag => (
+                            <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">   
+                                <span class="flex gap-x-1 sm:text-[8px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
+                                    <tag.icon class={`size-3 sm:size-6 ${tag.class}`}></tag.icon>
+                                    {tag.name}
+                                    </span>
+                                    </li>
+                                    ))}
+                                    </ul>
+                    <div class="flex justify-center md:p-1 mt-2 mx-auto bg-gray-700 hover:bg-gray-600 duration-300 cursor-pointer border rounded border-slate-500 w-[85px]">   
+                            <a class="text-[10px]" href={code} target="_blank"><button>View code</button></a>
                     </div>
                 </div>
-                                
-        </main>
+        </div>
         
         ))}
 </div>
@@ -204,14 +162,11 @@ import { Image } from 'astro:assets'
     }
 
     .link {
-        position: relative;
-        overflow: hidden;
         transition: width 0.3s, opacity 0.3s, transform 0.3s;
         opacity: 0.6;
     }
 
     .link:hover {
-
         opacity: 1;
         transform: scale(1.1);
     }
