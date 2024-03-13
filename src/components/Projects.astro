@@ -116,21 +116,21 @@ import { Image } from 'astro:assets'
                         </a>
                 </div>
                 <div class="flex flex-col justify-center mx-auto p-6">
-                    <p class="font-thin line text-xs sm:text-sm leading-3 ">{date}</p>
+                    <p class="font-thin line text-xs sm:text-sm leading-3 text-white">{date}</p>
                     <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] md:text-2xl lg:text-4xl text-pretty">{title}</h3>
                     <p class="text-white font-regular leading-3 text-[8px] md:text-xs lg:text-md text-pretty mb-4 mt-2 max-w-md">{type}</p>
                     <ul class="flex justify-center items-center md:mt-4 ">
                         {tags.map(tag => (
                             <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">   
-                                <span class="flex gap-x-1 sm:text-[8px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
-                                    <tag.icon class={`size-3 sm:size-6 ${tag.class}`}></tag.icon>
+                                <span class="flex gap-x-1 sm:text-[12px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
+                                    <tag.icon class={`size-3 sm:size-8 ${tag.class}`}></tag.icon>
                                     {tag.name}
                                     </span>
                                     </li>
                                     ))}
                                     </ul>
                     <div class="flex justify-center md:p-1 mt-2 mx-auto bg-gray-700 hover:bg-gray-600 duration-300 cursor-pointer border rounded border-slate-500 w-[85px]">   
-                            <a class="text-[10px]" href={code} target="_blank"><button>View code</button></a>
+                            <a class="text-[10px] text-white" href={code} target="_blank"><button>View code</button></a>
                     </div>
                 </div>
         </div>
