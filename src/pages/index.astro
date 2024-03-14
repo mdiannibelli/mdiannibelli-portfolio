@@ -13,6 +13,7 @@ import { Image } from 'astro:assets';
 import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Projects from '../components/Projects.astro'
+import OtherProjects from '../components/OtherProjects.astro'
 import Education from '../components/Education.astro'
 import About from '../components/About.astro'
 import Contact from '../components/Contact.astro'
@@ -58,6 +59,12 @@ description='Hire mdiannibelli for the development and design of web pages,'>
 		<SectionContainer id="projects" class='mb-20 lg:w-[940px]'>
 			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Code class="size-8"/>Projects</h2>
 			<Projects/>
+		</SectionContainer>
+
+		<!-- Other projects -->
+		<SectionContainer id="projects" class='mb-20 lg:w-[940px]'>
+			<h2 class="flex items-center gap-x-3 text-3xl font-semibold text-white mb-6"><Code class="size-8"/>Other Projects</h2>
+			<OtherProjects/>
 		</SectionContainer>
 		
 		<!-- Education -->

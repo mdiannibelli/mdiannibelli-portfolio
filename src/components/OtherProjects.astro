@@ -1,0 +1,92 @@
+---
+import iconReact from '../icons/ReactJs.astro'
+import iconFirebase from '../icons/Firebase.astro'
+import iconAstro from '../icons/AstroIcon.astro'
+import iconTailwind from '../icons/Tailwind.astro'
+import iconNextJs from '../icons/NextJs.astro'
+import iconCss from '../icons/Css.astro'
+const tagsIcon = {
+        REACTJS: {
+            name: "ReactJs",
+            icon: (iconReact),
+            class: ""
+        },
+        FIREBASE: {
+            name: "Firebase",
+            icon: (iconFirebase),
+            class: ""
+        },
+        ASTRO: {
+            name: "Astro",
+            icon: (iconAstro),
+            class: ""
+        },
+        TAILWIND: {
+            name: "Tailwind Css",
+            icon: (iconTailwind),
+            class: "bg-[#003159] text-white"
+        },
+        NEXTJS: {
+            name: "NextJs",
+            icon: (iconNextJs),
+            class: ""
+        },
+        CSS: {
+            name: "CSS",
+            icon: (iconCss),
+            class: ""
+        },
+    }
+
+const otherProjects = [
+    {
+        id: 1,
+        title: 'Tesla Clon',
+        desc: 'This is my cloned version of Tesla website dated 14/03/2004.',
+        link: 'https://tesla-clon-landingpage.vercel.app',
+        code: 'https://github.com/mdiannibelli/tesla-clon-landingpage',
+        tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
+    },
+    {
+        id: 2,
+        title: 'Dionel Shop',
+        desc: 'E-commerce with Firebase checkout.',
+        link: 'https://dionel-shop.netlify.app',
+        code: 'https://github.com/mdiannibelli/dionel-shop',
+        tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
+    },
+    {
+        id: 3,
+        title: 'Training Wiki',
+        desc: 'Website that presents itself as the "wikipedia of fitness".',
+        link: 'https://thetrainingwiki.netlify.app',
+        code: 'https://github.com/mdiannibelli/The-Training-Wiki',
+        tags: [tagsIcon.REACTJS, tagsIcon.CSS]
+    },
+]
+---
+<section class="flex flex-col md:flex-row items-center md:items-start justify-center gap-y-4 md:gap-x-4 lg:gap-x-8">
+    {otherProjects.map((project) => (
+        <div class="border-2 rounded-md border-purple-800 px-8 py-4 flex w-full h-full justify-center">
+        <div class="md:min-h-40">
+            <a href={project.link} target="_blank" rel="noopener" class="text-yellow-200 font-semibold leading-12 text-[10px] md:text-lg lg:text-2xl text-pretty">{project.title}</a>
+            <p class="text-white font-regular leading-3 text-[8px] md:text-[10px] lg:text-xs text-pretty mb-4 mt-2">{project.desc}</p>
+            <ul class="flex flex-col md:mt-4 ">
+                <div class="flex justify-center">
+                {project.tags.map(tag => (
+                    <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">   
+                        <span class="flex gap-x-1 sm:text-[9px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
+                            <tag.icon class={`size-2 lg:size-4 ${tag.class}`}></tag.icon>
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+                </div>
+                <div class="flex justify-center mx-auto md:p-1 mt-2 bg-gray-700 hover:bg-gray-600 duration-300 cursor-pointer border rounded border-slate-500 w-[85px]">   
+                    <a class="text-[10px] text-white" href={project.code} target="_blank"><button>View code</button></a>
+                </div>
+            </ul>
+        </div>   
+        </div>
+    ))}
+</section>
