@@ -7,11 +7,11 @@ import iconAstro from '../icons/AstroIcon.astro'
 import iconTailwind from '../icons/Tailwind.astro'
 import iconPhotoshop from '../icons/Photoshop.astro'
 import iconIllustrator from '../icons/Illustrator.astro'
-import iconNextJs from '../icons/NextJs.astro'
+import iconNext from '../icons/NextJs.astro'
 import shopecommerce from '../imgs/shopecommerce.webp' 
 import mdiannibelliasesorias from '../imgs/mdiannibelliasesorias.webp' 
 import limitesur from '../imgs/limitesur.webp' 
-import trainingwiki from '../imgs/trainingwiki.webp'
+import okawainstruments from '../imgs/okawainstruments.webp'
  
 import { Image } from 'astro:assets'
     const tagsIcon = {
@@ -57,14 +57,24 @@ import { Image } from 'astro:assets'
         },
         NEXTJS: {
             name: "NextJs",
-            icon: (iconNextJs),
+            icon: (iconNext),
             class: ""
         }
     }
 
     const Proyects = [
     {
-            id: 1,
+        id: 1,
+        date: '2024',
+        type: 'Okawa Instruments is an online instrument store for the best guitarists in the world. This website contains 4 sections and the most important is "store" which has more than 40 guitars. It has filters by brand, category, price, color, it also has a searcher in the navigation menu and a functional shopping cart which has a checkout phase that generates an order and sends it to Firebase. Was made in ReactJs with Tailwind CSS using Firebase to load products and create orders.',
+        title: 'Okawa Instruments',
+        img: okawainstruments,
+        link: 'https://okawa-instruments.vercel.app',
+        code: 'https://github.com/mdiannibelli/okawa-instruments',
+        tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
+    }, 
+    {
+            id: 2,
             date: '2024',
             type: 'Limite sur was a project that arose from a need for a client who had a cabin rental in Patagonia, Argentina. The website contains four sections, it has been developed in one of the most recent framework which is known as Astro that allows creating landing pages with a unique performance, and also implement other dependencies that in my case have been ReactJs used mainly in the section from Gallery.',
             title: 'Limite Sur Cabañas',
@@ -74,7 +84,7 @@ import { Image } from 'astro:assets'
             tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
     },
     {
-            id: 2,  
+            id: 3,  
             date: '2024',
             type: 'Bodybuilding consulting website, this project was done for myself because I needed to show my physical transformation to attract new clients, also to offer various forms of contact and what my training plans include.',
             title: 'Marcos Dionel',
@@ -84,7 +94,7 @@ import { Image } from 'astro:assets'
             tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND]
         },
         {
-            id: 3,
+            id: 4,
             date: '2024',
             type: 'This project was a store of fictitious products that has 5 sections, functions such as adding products to the shopping cart, checkout, login with firebase authentication, filtering products by category and by search engine and much more.',
             title: 'Shop E-commerce',
@@ -93,16 +103,6 @@ import { Image } from 'astro:assets'
             code: 'https://github.com/mdiannibelli/shop-ecommerce',
             tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
         },
-         {
-            id: 4,
-            date: '2023',
-            type: 'Website that presents itself as the "wikipedia of fitness." Our platform offers comprehensive information on a wide variety of topics related to training and physical activity.',
-            title: 'The Trainig Wiki',
-            img: trainingwiki,
-            link: 'https://thetrainingwiki.netlify.app',
-            code: 'https://github.com/mdiannibelli/The-Training-Wiki/tree/master',
-            tags: [tagsIcon.REACTJS, tagsIcon.CSS]
-        }, 
 ]
 
 ---
