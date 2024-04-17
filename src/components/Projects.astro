@@ -1,165 +1,205 @@
 ---
-import iconHTML from '../icons/HTML.astro'
-import iconReact from '../icons/ReactJs.astro'
-import iconFirebase from '../icons/Firebase.astro'
-import iconCss from '../icons/Css.astro'
-import iconAstro from '../icons/AstroIcon.astro'
-import iconTailwind from '../icons/Tailwind.astro'
-import iconPhotoshop from '../icons/Photoshop.astro'
-import iconIllustrator from '../icons/Illustrator.astro'
-import iconNext from '../icons/NextJs.astro'
-import shopecommerce from '../imgs/shopecommerce.webp' 
-import mdiannibelliasesorias from '../imgs/mdiannibelliasesorias.webp' 
-import limitesur from '../imgs/limitesur.webp' 
-import okawainstruments from '../imgs/okawainstruments.webp'
- 
-import { Image } from 'astro:assets'
-    const tagsIcon = {
-        HTML: {
-            name: "HTML",
-            icon: (iconHTML),
-            class: ""
-        },
-        REACTJS: {
-            name: "ReactJs",
-            icon: (iconReact),
-            class: ""
-        },
-        FIREBASE: {
-            name: "Firebase",
-            icon: (iconFirebase),
-            class: ""
-        },
-        CSS: {
-            name: "CSS",
-            icon: (iconCss),
-            class: ""
-        },
-        ASTRO: {
-            name: "Astro",
-            icon: (iconAstro),
-            class: ""
-        },
-        TAILWIND: {
-            name: "Tailwind Css",
-            icon: (iconTailwind),
-            class: "bg-[#003159] text-white"
-        },
-        PHOTOSHOP: {
-            name: "Photoshop",
-            icon:  (iconPhotoshop),
-            class: ""
-        },
-        ILLUSTRATOR: {
-            name: "Illustrator",
-            icon: (iconIllustrator),
-            class: ""
-        },
-        NEXTJS: {
-            name: "NextJs",
-            icon: (iconNext),
-            class: ""
-        }
-    }
+import iconHTML from "../icons/HTML.astro";
+import iconReact from "../icons/ReactJs.astro";
+import iconFirebase from "../icons/Firebase.astro";
+import iconCss from "../icons/Css.astro";
+import iconAstro from "../icons/AstroIcon.astro";
+import iconTailwind from "../icons/Tailwind.astro";
+import iconPhotoshop from "../icons/Photoshop.astro";
+import iconIllustrator from "../icons/Illustrator.astro";
+import iconNext from "../icons/NextJs.astro";
+import shopecommerce from "../imgs/shopecommerce.webp";
+import mdiannibelliasesorias from "../imgs/mdiannibelliasesorias.webp";
+import limitesur from "../imgs/limitesur.webp";
+import okawainstruments from "../imgs/okawainstruments.webp";
+import slashfanpage from "../imgs/slash-fanpage.webp"
+import { Image } from "astro:assets";
+const tagsIcon = {
+    HTML: {
+        name: "HTML",
+        icon: iconHTML,
+        class: "",
+    },
+    REACTJS: {
+        name: "ReactJs",
+        icon: iconReact,
+        class: "",
+    },
+    FIREBASE: {
+        name: "Firebase",
+        icon: iconFirebase,
+        class: "",
+    },
+    CSS: {
+        name: "CSS",
+        icon: iconCss,
+        class: "",
+    },
+    ASTRO: {
+        name: "Astro",
+        icon: iconAstro,
+        class: "",
+    },
+    TAILWIND: {
+        name: "Tailwind Css",
+        icon: iconTailwind,
+        class: "bg-[#003159] text-white",
+    },
+    PHOTOSHOP: {
+        name: "Photoshop",
+        icon: iconPhotoshop,
+        class: "",
+    },
+    ILLUSTRATOR: {
+        name: "Illustrator",
+        icon: iconIllustrator,
+        class: "",
+    },
+    NEXTJS: {
+        name: "NextJs",
+        icon: iconNext,
+        class: "",
+    },
+};
 
-    const Proyects = [
+const Proyects = [
     {
         id: 1,
-        date: '2024',
-        type: 'Okawa Instruments is an online instrument store for the best guitarists in the world. This website contains 4 sections and the most important is "store" which has more than 40 guitars. It has filters by brand, category, price, color, it also has a searcher in the navigation menu and a functional shopping cart which has a checkout phase that generates an order and sends it to Firebase. Was made in ReactJs with Tailwind CSS using Firebase to load products and create orders.',
-        title: 'Okawa Instruments',
-        img: okawainstruments,
-        link: 'https://okawa-instruments.vercel.app',
-        code: 'https://github.com/mdiannibelli/okawa-instruments',
-        tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
-    }, 
-    {
-            id: 2,
-            date: '2024',
-            type: 'Limite sur was a project that arose from a need for a client who had a cabin rental in Patagonia, Argentina. The website contains four sections, it has been developed in one of the most recent framework which is known as Astro that allows creating landing pages with a unique performance, and also implement other dependencies that in my case have been ReactJs used mainly in the section from Gallery.',
-            title: 'Limite Sur Cabañas',
-            img: limitesur,
-            link: 'https://limite-sur.vercel.app',
-            code: 'https://github.com/mdiannibelli/limite-sur',
-            tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND]
+        date: "2024",
+        type: 'Slash fandom landing page, designed to showcase the release of his new album. I used the intersection observer in the navigation bar menu and zustand in responsive navbar.',
+        title: "Slash Landing Page",
+        img: slashfanpage,
+        link: "https://slash-release.vercel.app",
+        code: "https://github.com/mdiannibelli/slash-release",
+        tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND],
     },
     {
-            id: 3,  
-            date: '2024',
-            type: 'Bodybuilding consulting website, this project was done for myself because I needed to show my physical transformation to attract new clients, also to offer various forms of contact and what my training plans include.',
-            title: 'Marcos Dionel',
-            img: mdiannibelliasesorias,
-            link: 'https://mdiannibelliasesorias.vercel.app',
-            code: 'https://github.com/mdiannibelli/mdiannibelliasesorias/tree/main',
-            tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND]
-        },
-        {
-            id: 4,
-            date: '2024',
-            type: 'This project was a store of fictitious products that has 5 sections, functions such as adding products to the shopping cart, checkout, login with firebase authentication, filtering products by category and by search engine and much more.',
-            title: 'Shop E-commerce',
-            img: shopecommerce,
-            link: 'https://shop-ecommerce-chi.vercel.app',
-            code: 'https://github.com/mdiannibelli/shop-ecommerce',
-            tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE]
-        },
-]
-
+        id: 2,
+        date: "2024",
+        type: 'Okawa Instruments is an online instrument store for the best guitarists in the world. This website contains 4 sections and the most important is "store" which has more than 40 guitars. It has filters by brand, category, price, color, it also has a searcher in the navigation menu and a functional shopping cart which has a checkout phase that generates an order and sends it to Firebase. Was made in ReactJs with Tailwind CSS using Firebase to load products and create orders.',
+        title: "Okawa Instruments",
+        img: okawainstruments,
+        link: "https://okawa-instruments.vercel.app",
+        code: "https://github.com/mdiannibelli/okawa-instruments",
+        tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE],
+    },
+    {
+        id: 3,
+        date: "2024",
+        type: "Limite sur was a project that arose from a need for a client who had a cabin rental in Patagonia, Argentina. The website contains four sections, it has been developed in one of the most recent framework which is known as Astro that allows creating landing pages with a unique performance, and also implement other dependencies that in my case have been ReactJs used mainly in the section from Gallery.",
+        title: "Limite Sur Cabañas",
+        img: limitesur,
+        link: "https://limite-sur.vercel.app",
+        code: "https://github.com/mdiannibelli/limite-sur",
+        tags: [tagsIcon.ASTRO, tagsIcon.TAILWIND],
+    },
+    {
+        id: 4,
+        date: "2024",
+        type: "Bodybuilding consulting website, this project was done for myself because I needed to show my physical transformation to attract new clients, also to offer various forms of contact and what my training plans include.",
+        title: "Marcos Dionel",
+        img: mdiannibelliasesorias,
+        link: "https://mdiannibelliasesorias.vercel.app",
+        code: "https://github.com/mdiannibelli/mdiannibelliasesorias/tree/main",
+        tags: [tagsIcon.NEXTJS, tagsIcon.TAILWIND],
+    },
+    {
+        id: 5,
+        date: "2024",
+        type: "This project was a store of fictitious products that has 5 sections, functions such as adding products to the shopping cart, checkout, login with firebase authentication, filtering products by category and by search engine and much more.",
+        title: "Shop E-commerce",
+        img: shopecommerce,
+        link: "https://shop-ecommerce-chi.vercel.app",
+        code: "https://github.com/mdiannibelli/shop-ecommerce",
+        tags: [tagsIcon.REACTJS, tagsIcon.FIREBASE],
+    },
+];
 ---
 
 <div class="flex flex-col gap-12">
-    {Proyects.map(({img, link, date, title, type, tags, code}, id) => (
-        <div class={`flex md:gap-8 ${id % 2 === 0 ? 'reverse-class' : ''} flex-col flex-wrap md:flex-nowrap md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}>
-            <div class="flex">
-                <a href={link} class="link" target="_blank">   
-                <Image src={img} alt={title} class="sm:w-[460px] sm:h-full lg:object-cover  rounded-md brightness-75 saturate-100 contrast-75"/>
-                        </a>
+    {
+        Proyects.map(({ img, link, date, title, type, tags, code }, id) => (
+            <div
+                class={`flex md:gap-8 ${id % 2 === 0 ? "reverse-class" : ""} flex-col flex-wrap md:flex-nowrap md:flex-row border-2 border-[rgba(113,71,255)] rounded-xl`}
+            >
+                <div class="flex">
+                    <a href={link} class="link" target="_blank">
+                        <Image
+                            src={img}
+                            alt={title}
+                            class="sm:w-[400px] sm:h-full lg:object-cover  rounded-md brightness-75 saturate-100 contrast-75"
+                        />
+                    </a>
                 </div>
                 <div class="flex flex-col justify-center mx-auto p-6">
-                    <p class="font-thin line text-xs sm:text-sm leading-3 text-white">{date}</p>
-                    <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] md:text-2xl lg:text-4xl text-pretty">{title}</h3>
-                    <p class="text-white font-regular leading-3 text-[8px] md:text-xs lg:text-md text-pretty mb-4 mt-2 max-w-md">{type}</p>
+                    <p class="font-thin line text-xs sm:text-sm leading-3 text-white">
+                        {date}
+                    </p>
+                    <h3 class="text-yellow-200 font-semibold leading-12 text-[12px] md:text-2xl lg:text-4xl text-pretty">
+                        {title}
+                    </h3>
+                    <p class="text-white font-regular leading-3 text-[8px] md:text-xs lg:text-md text-pretty mb-4 mt-2 max-w-md">
+                        {type}
+                    </p>
                     <ul class="flex justify-center items-center md:mt-4 ">
-                        {tags.map(tag => (
-                            <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">   
+                        {tags.map((tag) => (
+                            <li class="text-[7px] text-white sm:text-xs text-pretty ml-1 mr-1">
                                 <span class="flex gap-x-1 sm:text-[12px] text-[10px] text-white items-center py-1 px-3 border bg-purple-900 border-violet-500 rounded">
-                                    <tag.icon class={`size-3 sm:size-8 ${tag.class}`}></tag.icon>
+                                    <tag.icon
+                                        class={`size-3 sm:size-8 ${tag.class}`}
+                                    />
                                     {tag.name}
-                                    </span>
-                                    </li>
-                                    ))}
-                                    </ul>
-                    <div class="flex justify-center md:p-1 mt-2 mx-auto bg-gray-700 hover:bg-gray-600 duration-300 cursor-pointer border rounded border-slate-500 w-[85px]">   
-                            <a class="text-[10px] text-white" href={code} target="_blank"><button>View code</button></a>
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                    <div class="flex justify-center md:p-1 mt-2 mx-auto bg-gray-700 hover:bg-gray-600 duration-300 cursor-pointer border rounded border-slate-500 w-[85px]">
+                        <a
+                            class="text-[10px] text-white"
+                            href={code}
+                            target="_blank"
+                        >
+                            <button>View code</button>
+                        </a>
                     </div>
                 </div>
-        </div>
-        
-        ))}
+            </div>
+        ))
+    }
 </div>
-<div class="grid justify-center mt-10">
-    <a class= "all-projects" href="https://www.behance.net/mdiannibelli" target="_blank"><button class="rounded-md py-1 pr-4 pl-4 cursor-pointer text-white border-none text-sm font-family: system-ui,sans-serif font-semibold">See all my projects</button></a>
-</div>
+<!-- <div class="grid justify-center mt-10">
+    <a
+        class="all-projects"
+        href="https://www.behance.net/mdiannibelli"
+        target="_blank"
+        ><button
+            class="rounded-md py-1 pr-4 pl-4 cursor-pointer text-white border-none text-sm font-family: system-ui,sans-serif font-semibold"
+            >See all my projects</button
+        ></a
+    >
+</div> -->
 
 <style>
     .all-projects:hover {
-        color: rgba(113,71,255);
-    
+        color: rgba(113, 71, 255);
     }
     .all-projects button {
-        background-color: rgba(113,71,255);
-        transition-timing-function: cubic-bezier(.4,0,1,1);
-        transition-duration: .15s;
+        background-color: rgba(113, 71, 255);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition-duration: 0.15s;
     }
-    
+
     .all-projects button:hover {
-        background-color: rgba(61,29,146);
-        transition-timing-function: cubic-bezier(.4,0,1,1);
-        transition-duration: .15s;
+        background-color: rgba(61, 29, 146);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition-duration: 0.15s;
     }
 
     .link {
-        transition: width 0.3s, opacity 0.3s, transform 0.3s;
+        transition:
+            width 0.3s,
+            opacity 0.3s,
+            transform 0.3s;
         opacity: 0.6;
     }
 
